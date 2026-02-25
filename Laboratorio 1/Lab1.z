@@ -33,6 +33,4 @@ Z => Z abs := fn(Z x) -> if(lt(0)(x), chs(x), x);
 Z => Z => Z mulP := fn(Z x) -> fn(Z y) -> if(y, add(x)(mulP(x)(sub(1)(y))), 0);
 Z => Z => Z mul := fn(Z x) -> fn(Z y) -> if( xor(lt(x)(0))(lt(y)(0)), chs(mulP(abs(x))(abs(y))), mulP(abs(x))(abs(y)));
 Z => Z => Z sqrt_aux := fn(Z n) -> fn(Z i) -> if(lt(mulP(add(1)(i))(add(1)(i)))(n), i, sqrt_aux(n)(add(1)(i)));
-Z => Z sqrt := fn(Z n) -> sqrt_aux(n)(0);
-
-Codigo ejemplos para poner en la terminal y comprobar el funcionamiento 
+Z => Z sqrt := fn(Z n) -> sqrt_aux(n)(0); 
