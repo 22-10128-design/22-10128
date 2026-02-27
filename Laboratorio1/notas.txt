@@ -1,0 +1,3 @@
+c++: 50.000
+zilly: 50.000
+penalizacion: -15.000
