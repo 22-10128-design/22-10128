@@ -1,3 +1,17 @@
-Z => Z => Z de_morgan1 := 5;
-Z => Z => Z de_morgan2 := 5;
-Z => Z succ := 5;
+Z => Z chs := fn(Z n) -> sub(n)(0);
+
+// Ejercicio 1 Teoremas de Morgan 
+Z => Z => Z de_morgan1 := fn(Z p) -> fn(Z q) -> if(if(p, q, 0), 0, 1);
+Z => Z => Z de_morgan2 := fn(Z p) -> fn(Z q) -> if(if(p, 1, q), 0, 1);
+
+//Ejercicio 2 Sucesiones
+Z => Z succ := fn(Z z) -> sub(chs(1))(z);
+
+// Codigo para ejecutar directo en MiticalC (ZenSheet Zilly ICE)
+Z => Z chs := fn(Z n) -> sub(n)(0);
+Z => Z => Z de_morgan1 := fn(Z p) -> fn(Z q) -> if(if(p, q, 0), 0, 1);
+Z => Z => Z de_morgan2 := fn(Z p) -> fn(Z q) -> if(if(p, 1, q), 0, 1);
+Z => Z succ := fn(Z z) -> sub(chs(1))(z);
+
+//PD: En el ejercicio menciona que metes succ(-100) y te da 99, pero asumo que esto es un error de tipeo ya que son sucesiones, asi mismo como no pondre de nombre de la carpeta Tadea apesar de que eso menciona 
+el codigo en el Readme.txt dado que claramente es un error de tipeo
