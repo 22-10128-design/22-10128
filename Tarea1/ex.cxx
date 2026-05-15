@@ -99,7 +99,3 @@ vector<char> octapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_
 vector<char> octopus_to_hexakaidecapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 8), 16); }
 vector<char> hexakaidecapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 7); }
 vector<char> hexakaidecapus_to_octopus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 8); }
-
-//Declaracion de Uso de IA
-//IA utilizada:Gemini
-//Ejercicio 4 y 5. Para el ejercicio 4 agrego la libreria cmath, esto para poder realizar las operaciones de raiz y potencia.
