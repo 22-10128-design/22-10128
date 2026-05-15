@@ -49,9 +49,8 @@ double pearson_r(vector<double> A, vector<double> B){
   return arriba / (sqrt(abajo_a) * sqrt(abajo_b));
 }
 
-// Ejercicio 5 Conversiones (Solo usando lo básico) 
+// Ejercicio 5 Conversiones
 
-// Esta función ayuda a las demás. Convierte un número a cualquier base.
 vector<char> convertir_a_base(int n, int base) {
   if (n == 0) return {'0'};
   vector<char> resultado;
@@ -64,7 +63,6 @@ vector<char> convertir_a_base(int n, int base) {
     if (residuo < 10) digito = residuo + '0';
     else digito = (residuo - 10) + 'A';
     
-    // Insertamos al principio para que no salga al revés
     resultado.insert(resultado.begin(), digito);
     n = n / base;
   }
@@ -72,7 +70,6 @@ vector<char> convertir_a_base(int n, int base) {
   return resultado;
 }
 
-// Esta función ayuda a pasar de una base a un número normal (decimal)
 int pasar_a_decimal(vector<char> s, int base) {
   int n = 0;
   int inicio = 0;
@@ -102,3 +99,7 @@ vector<char> octapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_
 vector<char> octopus_to_hexakaidecapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 8), 16); }
 vector<char> hexakaidecapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 7); }
 vector<char> hexakaidecapus_to_octopus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 8); }
+
+//Declaracion de Uso de IA
+//IA utilizada:Gemini
+//Ejercicio 4 y 5. Para el ejercicio 4 agrego la libreria cmath, esto para poder realizar las operaciones de raiz y potencia.
