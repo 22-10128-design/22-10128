@@ -94,11 +94,9 @@ int pasar_a_decimal(vector<char> s, int base) {
 vector<char> dec_to_septapus(int n){ return convertir_a_base(n, 7); }
 vector<char> dec_to_octopus(int n){ return convertir_a_base(n, 8); }
 vector<char> dec_to_hexakaidecapus(int n){ return convertir_a_base(n, 16); }
-
 vector<char> septapus_to_dec(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 7), 10); }
 vector<char> octopus_to_dec(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 8), 10); }
 vector<char> hexakaidecapus_to_dec(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 10); }
-
 vector<char> septapus_to_octopus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 7), 8); }
 vector<char> septapus_to_hexakaidecapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 7), 16); }
 vector<char> octapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 8), 7); }
