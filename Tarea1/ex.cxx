@@ -7,7 +7,7 @@ int main(){
   return 0;
 }
 
-// Ejercicio 3: Estadística
+// Ejercicio 3 Estadística
 
 double mean(vector<double> v){
   if (v.size() == 0) return 0;
@@ -87,7 +87,7 @@ int pasar_a_decimal(vector<char> s, int base) {
   return es_negativo ? -n : n;
 }
 
-// Implementación de las funciones de la tarea
+// Aplicacion de las funciones de la tarea
 vector<char> dec_to_septapus(int n){ return convertir_a_base(n, 7); }
 vector<char> dec_to_octopus(int n){ return convertir_a_base(n, 8); }
 vector<char> dec_to_hexakaidecapus(int n){ return convertir_a_base(n, 16); }
