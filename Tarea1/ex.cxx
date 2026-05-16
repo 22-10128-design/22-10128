@@ -7,12 +7,12 @@ int main(){
   return 0;
 }
 
-// Ejercicio 3 Estadistica 
+// Ejercicio 3: Estadística
 
 double mean(vector<double> v){
   if (v.size() == 0) return 0;
   double suma = 0;
-  for (int i = 0; i < v.size(); i++) {
+  for (size_t i = 0; i < v.size(); i++) {
     suma = suma + v[i];
   }
   return suma / v.size();
@@ -22,13 +22,13 @@ double variance(vector<double> v){
   if (v.size() == 0) return 0;
   double promedio = mean(v);
   double suma_distancias = 0;
-  for (int i = 0; i < v.size(); i++) {
+  for (size_t i = 0; i < v.size(); i++) {
     suma_distancias = suma_distancias + pow(v[i] - promedio, 2);
   }
   return suma_distancias / v.size();
 }
 
-// Ejercicio 4 Pearson
+// Ejercicio 4 Pearson 
 
 double pearson_r(vector<double> A, vector<double> B){
   if (A.size() != B.size() || A.size() == 0) return 0;
@@ -39,7 +39,7 @@ double pearson_r(vector<double> A, vector<double> B){
   double abajo_a = 0;
   double abajo_b = 0;
   
-  for (int i = 0; i < A.size(); i++) {
+  for (size_t i = 0; i < A.size(); i++) {
     arriba = arriba + (A[i] - m_a) * (B[i] - m_b);
     abajo_a = abajo_a + pow(A[i] - m_a, 2);
     abajo_b = abajo_b + pow(B[i] - m_b, 2);
@@ -49,7 +49,7 @@ double pearson_r(vector<double> A, vector<double> B){
   return arriba / (sqrt(abajo_a) * sqrt(abajo_b));
 }
 
-// Ejercicio 5 Conversiones
+//  Ejercicio 5 Conversiones 
 
 vector<char> convertir_a_base(int n, int base) {
   if (n == 0) return {'0'};
@@ -78,7 +78,7 @@ int pasar_a_decimal(vector<char> s, int base) {
     es_negativo = true;
     inicio = 1;
   }
-  for (int i = inicio; i < s.size(); i++) {
+  for (size_t i = inicio; i < s.size(); i++) {
     int valor;
     if (s[i] >= '0' && s[i] <= '9') valor = s[i] - '0';
     else valor = s[i] - 'A' + 10;
@@ -87,6 +87,7 @@ int pasar_a_decimal(vector<char> s, int base) {
   return es_negativo ? -n : n;
 }
 
+// Implementación de las funciones de la tarea
 vector<char> dec_to_septapus(int n){ return convertir_a_base(n, 7); }
 vector<char> dec_to_octopus(int n){ return convertir_a_base(n, 8); }
 vector<char> dec_to_hexakaidecapus(int n){ return convertir_a_base(n, 16); }
@@ -99,3 +100,6 @@ vector<char> octapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_
 vector<char> octopus_to_hexakaidecapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 8), 16); }
 vector<char> hexakaidecapus_to_septapus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 7); }
 vector<char> hexakaidecapus_to_octopus(vector<char> s){ return convertir_a_base(pasar_a_decimal(s, 16), 8); }
+
+// REGISTRO DE APOYO (IA) - Tarea 1
+// Modelo: Gemini 3 Flash
