@@ -5,7 +5,7 @@ Z => Z fibo := fn(Z n) => Z -> if(n < 2, n, fibo(n - 1) + fibo(n - 2));
 // Implementación de sfib 
 Z => Z sfib := fn(Z n) -> if(n <= 0, fibo(0), fibo(n) + sfib(n - 1));
 
-// Implementación directa de zfib sin recursión propia 
+// Implementación directa de zfib sin recursión 
 // Fórmula: sfib(n) = fibo(n + 2) - 1
 Z => Z zfib := fn(Z n) -> fibo(n + 2) - 1;
 
