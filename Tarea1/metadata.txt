@@ -1,0 +1,7 @@
+Declaracio de Uso de IA
+Modelo: Gemini 
+Ejercicio 4 
+Prompt: necesito implementar la fórmula del coeficiente de Pearson para comparar dos listas de números, asegurándome de que el programa no falle si las listas están vacías.
+Ejercicio 5 
+Prompt: necesito una forma sencilla de convertir números entre base 10, 7, 8 y 16. Que sea usando funciones de apoyo para no repetir el mismo código muchas veces y que el archivo quede ordenado y fácil de entender.
+(La ultima parte del prompt la puse por que el codigo se me estaba haciendo demasiado enredado) 
